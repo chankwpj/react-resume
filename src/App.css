@@ -1,0 +1,44 @@
+body {
+    background: rgb(204,204,204); 
+}
+
+.paper {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    width: 21cm;
+    height: 29.7cm;
+}
+
+/* .headerBlock {
+    height: 10%;
+} */
+
+div {
+    border: thin;
+    border-color: black;
+    border-style: dotted;
+}
+
+.left {
+    width: 70%;
+    float: left;
+    display: block;
+}
+
+.right {
+    margin-left: 30%;
+    display: block;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.sectionTitle {
+    font-weight: bold;
+    font-size: 150%;
+}
