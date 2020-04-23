@@ -7,10 +7,10 @@ class Exp extends React.Component {
         const exp = this.props.item;
         return (
             <div>
-                {exp.companyName.length != 0 &&
+                {exp.companyName.length !== 0 &&
                     <p>{exp.companyName} - {exp.jobTitle}</p>
                 }
-                {exp.from.length != 0 && 
+                {exp.from.length !== 0 && 
                     <p>{exp.from} - {exp.to} {exp.location}</p>
                 }
                 <p>{exp.team}</p>

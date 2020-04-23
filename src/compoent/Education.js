@@ -1,17 +1,14 @@
 import React from 'react';
 
 class Education extends React.Component {
+
     render() {
+        console.log(this.props.educationItem);
         return (
             <div>
                 <p className="sectionTitle">EDUCATION</p>
-                Cardif University — BSc in Computer Science
-                2015 to 2017 First Class
-                Forensic Image Processing: Bruise
-                - Successful prototyped a solution for automatic evidential object
-                segmentation, matching and measurement to support launching
-                funded PhD/Application project
-                Python - OpenCV
+                <p>{this.props.educationItem.university} - {this.props.educationItem.degree}</p>
+                <p>{this.props.educationItem.to} to {this.props.educationItem.from} {this.props.educationItem.classification}</p>
             </div>
         )
     }

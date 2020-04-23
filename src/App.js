@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="paper">
       <HeaderBlock/>
-      <LeftMain experienceItems = {resume.experienceItem} />
+      <LeftMain experienceItems = {resume.experienceItem} educationItem = {resume.educationItem} />
       <RightMain/>
     </div>
   );

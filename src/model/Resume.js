@@ -1,7 +1,8 @@
 export default class Resume {
 
-  constructor(experienceItem) {
+  constructor(experienceItem, educationItem) {
     this.experienceItem = experienceItem;
+    this.educationItem = educationItem;
   }
 
 }
