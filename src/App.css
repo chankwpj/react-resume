@@ -5,22 +5,26 @@ body {
 .paper {
     background: white;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    /* margin: 0 auto;
+    margin-bottom: 0.5cm; */
+    box-shadow: 0 0 0.5cm rgba(0,0,0,1);
     width: 21cm;
     height: 29.7cm;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
 }
 
 /* .headerBlock {
     height: 10%;
 } */
 
-div {
+/* div {
     border: thin;
     border-color: black;
     border-style: dotted;
-}
+} */
 
 .left {
     width: 70%;
@@ -40,5 +44,28 @@ div {
 
 .sectionTitle {
     font-weight: bold;
-    font-size: 150%;
+    font-size: 180%;
+    margin: 2%
+}
+
+p {
+    font-size: 105%;
+    margin: 1.5%
+}
+
+.expItem {
+    margin-bottom: 5%;
+}
+
+.employer {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.team {
+    font-weight: bold;
+}
+
+.award {
+    margin-bottom: 3%;
 }

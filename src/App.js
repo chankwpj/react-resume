@@ -8,12 +8,12 @@ import getResume from './API'
 
 function App() {
   const resume = getResume();
-  console.log(resume);
+  // console.log(resume);
   return (
     <div className="paper">
       <HeaderBlock/>
       <LeftMain experienceItems = {resume.experienceItem} educationItem = {resume.educationItem} />
-      <RightMain/>
+      <RightMain educationItem = {resume.educationItem} awardItem = {resume.awardItem}/>
     </div>
   );
 }
