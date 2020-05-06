@@ -11,9 +11,9 @@ function App() {
   // console.log(resume);
   return (
     <div className="paper">
-      <HeaderBlock/>
-      <LeftMain experienceItems = {resume.experienceItem} educationItem = {resume.educationItem} />
-      <RightMain educationItem = {resume.educationItem} awardItem = {resume.awardItem}/>
+      <HeaderBlock personName = {resume.name} contact = {resume.contact}/>
+      <LeftMain experienceItems = {resume.experienceItems} educationItem = {resume.educationItems} />
+      <RightMain educationItem = {resume.educationItem} awardItems = {resume.awardItems} skillItems = {resume.skillItems}/>
     </div>
   );
 }

@@ -2,15 +2,17 @@ import React from 'react';
 
 class HeaderBlock extends React.Component {
     render() {
+        const contact = this.props.contact;
+        console.log(contact);
         return (
             <div className="headerBlock">
                 <div className="name left" >
-                    Kai Chan
+                    {this.props.personName}
                 </div>
                 <div className="contact right">
-                    www.linkedin.com/in/chankwjh/
-                    Email: chankw.jh@gmail.com
-                    London, United Kingdom
+                    <div>{contact.email}</div>
+                    <div>{contact.linkedIn}</div>
+                    <div>{contact.location}</div>
                 </div>
             </div>
         )

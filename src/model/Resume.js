@@ -1,9 +1,12 @@
 export default class Resume {
 
-  constructor(experienceItem, educationItem, awardItem) {
-    this.experienceItem = experienceItem;
+  constructor(name, contact, experienceItems, educationItem, awardItems, skillItems) {
+    this.experienceItems = experienceItems;
     this.educationItem = educationItem;
-    this.awardItem = awardItem;
+    this.awardItems = awardItems;
+    this.skillItems = skillItems;
+    this.name = name;
+    this.contact = contact;
   }
 
 }

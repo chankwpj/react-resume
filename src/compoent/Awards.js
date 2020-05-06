@@ -3,7 +3,7 @@ import Award from './Award';
 
 class Awards extends React.Component {
     render() {
-        const awardItems = this.props.awardItem;
+        const awardItems = this.props.awardItems;
         // console.log(awardItems);
         return (
             <div>

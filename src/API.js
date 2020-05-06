@@ -2,9 +2,11 @@ import ExperienceItem from './model/ExperienceItem'
 import EducationItem from './model/EducationItem'
 import AwardItem from './model/AwardItem'
 import Resume from './model/Resume'
+import Contact from './model/Contact'
 
 export default function () {
-    return new Resume(getExperienceItems(), getEducation(), getAwards());
+    return new Resume("Kai Chan", getContact(), getExperienceItems(), getEducation(),
+        getAwards(), getSkills());
 };
 
 function getExperienceItems() {
@@ -19,7 +21,7 @@ function getExperienceItems() {
                 "Developed restful API in proprietary cloud environment"
             ],
             ["Spring Boot - Kafka - Swagger/OpenApi - Cucumber - MongoDB",
-            "Gitlab CI/CD - Infastructure as code - Terraform - AWS"]
+                "Gitlab CI/CD - Infastructure as code - Terraform - AWS"]
         ),
         new ExperienceItem(
             "The Hut Group", "Software Engineer", "Aug 2017", "Sept 2019",
@@ -45,7 +47,7 @@ function getExperienceItems() {
             "Cardiff, United Kingdom", "", [], ["MATLAB Signal/Image Processing Toolbox"]
         ),
         new ExperienceItem("FlexSystem Limited", "Software Engineer Intern", "June 2014",
-        "", "Hong Kong", "", [], ["Android - Java - xml"] )
+            "", "Hong Kong", "", [], ["Android - Java - xml"])
     ]
 }
 
@@ -63,4 +65,17 @@ function getAwards() {
         new AwardItem("Hong Kong Special Administrative Region Government Scholarship 2014"),
         new AwardItem("China College Students Entrepreneurship Competition 2014", "Silver Award")
     ];
+}
+
+function getSkills() {
+    return [
+        "Full-stack development",
+        "QA",
+        "System administration",
+        "DevOps"
+    ];
+}
+
+function getContact() {
+    return new Contact("www.linkedin.com/in/chankwjh/", "chankw.jh@gmail.com", "London, United Kingdom");
 }
