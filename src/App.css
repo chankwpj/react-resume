@@ -15,10 +15,6 @@ body {
     padding-left: 2.5%;
 }
 
-/* .headerBlock {
-    height: 10%;
-} */
-
 /* div {
     border: thin;
     border-color: black;
@@ -26,13 +22,13 @@ body {
 } */
 
 .left {
-    width: 70%;
+    width: 68%;
     float: left;
     display: block;
 }
 
 .right {
-    margin-left: 30%;
+    margin-left: 32%;
     display: block;
 }
 
@@ -43,8 +39,12 @@ body {
 
 .sectionTitle {
     font-weight: bold;
-    font-size: 155%;
+    font-size: 140%;
     margin: 2%
+}
+
+.contact {
+    font-size: 94%;
 }
 
 p {

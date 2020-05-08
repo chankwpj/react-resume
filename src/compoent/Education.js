@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 class Education extends React.Component {
 
@@ -7,10 +7,18 @@ class Education extends React.Component {
         return (
             <div>
                 <p className="sectionTitle">EDUCATION</p>
-                <p>{this.props.educationItem.degree}</p>
-                <p>- {this.props.educationItem.university}</p>
-                <p>- {this.props.educationItem.to} to {this.props.educationItem.from}</p>
-                <p>- {this.props.educationItem.classification}</p>
+                <p>{this.props.educationItem.degree} ({this.props.educationItem.classification})</p>
+                <p>{this.props.educationItem.university} &emsp;&emsp; {this.props.educationItem.from} to {this.props.educationItem.to}</p>
+                {
+                    this.props.educationItem.projects.map((project, index) => {
+                        return (
+                            <Fragment key={index}>
+                                <p>- {project.name}</p>
+                                <p>{project.techStacks}</p>
+                            </Fragment>
+                        )
+                    })
+                }
             </div>
         )
     }
