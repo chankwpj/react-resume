@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://kaichan-resume-api.azurewebsites.net/resume/v1')
+    fetch('https://kaichan-resume-api.azurewebsites.net/resume/release')
       .then(res => res.json())
       .then((data) => {
         this.setState({ resume: data });
