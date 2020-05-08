@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import HeaderBlock from './compoent/Header'
 import LeftMain from './compoent/LeftMain'
 import RightMain from './compoent/RightMain'
 import './App.css';
-import getResume from './API'
-// import resume from './model/Resume'
 
-function App() {
-  const resume = getResume();
-  // console.log(resume);
-  return (
-    <div className="paper">
-      <HeaderBlock personName = {resume.name} contact = {resume.contact}/>
-      <LeftMain experienceItems = {resume.experienceItems} educationItem = {resume.educationItems} />
-      <RightMain educationItem = {resume.educationItem} awardItems = {resume.awardItems} skillItems = {resume.skillItems}/>
-    </div>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { resume: {} };
+  }
+
+  componentDidMount() {
+    fetch('https://kaichan-resume-api.azurewebsites.net/resume/v1')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ resume: data });
+        // console.log(this.state.resume);
+      })
+      .catch(console.log)
+  }
+
+  render() {
+    if (Object.keys(this.state.resume).length === 0)
+      return <div className="paper"></div>
+    else
+      return (
+        <div className="paper">
+          <HeaderBlock personName={this.state.resume.name} contact={this.state.resume.contact} />
+          <LeftMain experienceItems={this.state.resume.experienceItems} educationItem={this.state.resume.educationItems} />
+          <RightMain educationItem={this.state.resume.educationItem} awardItems={this.state.resume.awardItems} skillItems={this.state.resume.skillItems} />
+        </div>
+      );
+  }
 }
 
 export default App;
