@@ -1,15 +1,25 @@
 import React from 'react';
-import Exp from './Exp'
 
 class Experience extends React.Component {
+
     render() {
+        // console.log(this.props.item);
+        const exp = this.props.item;
         return (
-            <div>
-              <p className="sectionTitle">EXPERIENCE</p>
-                {/* <Exp item={this.props.experienceItems[0]}/> */}
-                {this.props.experienceItems.map((item, index) => {
-                    return <Exp key={index} item={item}></Exp>;
-                })} 
+            <div className='expItem'>
+                {exp.companyName.length !== 0 &&
+                    <p className='employer'>{exp.companyName} - {exp.jobTitle}</p>
+                }
+                {exp.from.length !== 0 && 
+                    <p>{exp.from} - {exp.to} &emsp;&emsp;&emsp;&emsp; {exp.location}</p>
+                }
+                <p className='team'>{exp.team}</p>
+                {exp.descriptions.map((desc, index) => {
+                    return <p key={index}>- {desc}</p>;
+                })}
+                {exp.techStacks.map((stack, index) => {
+                    return <p key={index}>{stack}</p>;
+                })}
             </div>
         )
     }

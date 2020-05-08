@@ -1,11 +1,11 @@
 import React from 'react';
-import Experience from './Experience.js'
+import Experiences from './Experiences.js'
 
 class LeftMain extends React.Component {
     render() {
         return (
             <div className="left leftMain">
-                <Experience experienceItems = {this.props.experienceItems}/>
+                <Experiences experienceItems = {this.props.experienceItems}/>
             </div>
         )
     }
