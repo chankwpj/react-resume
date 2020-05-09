@@ -3,6 +3,7 @@ import HeaderBlock from './compoent/Header'
 import LeftMain from './compoent/LeftMain'
 import RightMain from './compoent/RightMain'
 import './App.css';
+import './Print.css';
 
 class App extends Component {
 

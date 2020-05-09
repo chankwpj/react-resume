@@ -1,0 +1,17 @@
+@media print {
+
+  body {
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0;
+    padding: 0;
+  }
+
+  .paper {
+    margin: 0;
+    box-shadow: 0 0 0 rgba(0,0,0,1);
+    width: 21cm;
+    height: 29.7cm;
+  }
+
+}
