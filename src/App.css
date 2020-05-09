@@ -1,70 +1,80 @@
 body {
-    background: rgb(204,204,204); 
+    background: rgb(116, 114, 114); 
 }
 
 .paper {
     background: white;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     box-shadow: 0 0 0.5cm rgba(0,0,0,1);
     width: 21cm;
     height: 29.7cm;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
     padding-right: 2.5%;
     padding-left: 2.5%;
 }
 
-/* div {
-    border: thin;
-    border-color: black;
-    border-style: dotted;
-} */
-
-.left {
-    width: 68%;
-    float: left;
-    display: block;
+.headerBlock {
+    display: inline-flex;
 }
 
-.right {
-    margin-left: 32%;
-    display: block;
+.leftBlock {
+    flex: 7;
+    order: 1;
 }
 
-.name {
+.rightBlock {
+    flex: 4;
+    order: 2;
+}
+
+.mainBlock {
+    display: inline-flex;
+}
+
+.flex-colum {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .name {
     font-weight: bold;
     font-size: 300%;
-}
+} */
 
-.sectionTitle {
-    font-weight: bold;
-    font-size: 140%;
-    margin: 2%
-}
-
-.contact {
+/* .contact {
     font-size: 94%;
+} */
+
+h1 {
+    font-size: 300%;
+    margin: 2%;
+}
+
+h2 {
+    margin: 2%;
+}
+
+h4 {
+    margin: 2%;
 }
 
 p {
-    font-size: 94%;
-    margin: 1.5%
+    font-size: 100%;
+    margin: 0.99%
 }
 
 .expItem {
-    margin-bottom: 5%;
-}
-
-.employer {
-    font-weight: bold;
-    font-size: 110%;
-}
-
-.team {
-    font-weight: bold;
+    margin-bottom: 3%;
 }
 
 .award {
     margin-bottom: 3%;
+}
+
+.section {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

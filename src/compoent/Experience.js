@@ -20,12 +20,12 @@ class Experience extends React.Component {
         return (
             <div className='expItem'>
                 {exp.companyName.length !== 0 &&
-                    <p className='employer'>{exp.companyName} - {exp.jobTitle}</p>
+                    <h4>{exp.companyName} - {exp.jobTitle}</h4>
                 }
                 {exp.from.length !== 0 && 
                     <p>{dateBlock} &emsp;&emsp;&emsp;&emsp; {exp.location}</p>
                 }
-                <p className='team'>{exp.team}</p>
+                <h4>{exp.team}</h4>
                 {exp.descriptions.map((desc, index) => {
                     return <p key={index}>- {desc}</p>;
                 })}

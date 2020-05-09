@@ -6,8 +6,8 @@ class Awards extends React.Component {
         const awardItems = this.props.awardItems;
         // console.log(awardItems);
         return (
-            <div>
-                <p className="sectionTitle">AWARDS</p>
+            <div className="section flex-colum">
+                <h2>AWARDS</h2>
                 {
                     awardItems.map((awardItem, index) => {
                         return <Award key={index} awardItem={awardItem} />

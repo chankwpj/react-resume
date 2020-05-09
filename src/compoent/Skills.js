@@ -4,8 +4,8 @@ class Skills extends React.Component {
     render() {
         const skillItems = this.props.skillItems;
         return (
-            <div>
-                <p className="sectionTitle">SKILLS</p>
+            <div className="section">
+                <h2>SKILLS</h2>
                 {
                     skillItems.map((item, index) => {
                         return <p key={index}>{item}</p>

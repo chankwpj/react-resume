@@ -4,7 +4,7 @@ import Experiences from './Experiences.js'
 class LeftMain extends React.Component {
     render() {
         return (
-            <div className="left leftMain">
+            <div className="flex-colum leftBlock">
                 <Experiences experienceItems = {this.props.experienceItems}/>
             </div>
         )

@@ -5,8 +5,8 @@ class Education extends React.Component {
     render() {
         // console.log(this.props.educationItem);
         return (
-            <div>
-                <p className="sectionTitle">EDUCATION</p>
+            <div className="section">
+                <h2>EDUCATION</h2>
                 <p>{this.props.educationItem.degree} ({this.props.educationItem.classification})</p>
                 <p>{this.props.educationItem.university} &emsp;&emsp; {this.props.educationItem.from} to {this.props.educationItem.to}</p>
                 {

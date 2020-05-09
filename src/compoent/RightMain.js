@@ -6,7 +6,7 @@ import Education from './Education';
 class RightMain extends React.Component {
     render() {
         return (
-            <div className="right">
+            <div className="flex-colum rightBlock">
                 <Skills skillItems = {this.props.skillItems}/>
                 <Awards awardItems = {this.props.awardItems}/>
                 <Education educationItem = {this.props.educationItem}/>

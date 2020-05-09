@@ -6,10 +6,10 @@ class HeaderBlock extends React.Component {
         // console.log(contact);
         return (
             <div className="headerBlock">
-                <div className="name left" >
-                    {this.props.personName}
+                <div className="leftBlock" >
+                    <h1>{this.props.personName}</h1>
                 </div>
-                <div className="contact right">
+                <div className="contact rightBlock">
                     <div>{contact.email}</div>
                     <div>{contact.linkedIn}</div>
                     <div>{contact.location}</div>
