@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import HeaderBlock from './compoent/Header'
-import LeftMain from './compoent/LeftMain'
-import RightMain from './compoent/RightMain'
+import Experiences from './compoent/Experiences'
+import Skills from './compoent/Skills';
+import Awards from './compoent/Awards';
+import Education from './compoent/Education';
 import './App.css';
 import './Print.css';
 
@@ -30,8 +32,14 @@ class App extends Component {
         <div className="paper rotate-in-ver">
           <HeaderBlock personName={this.state.resume.name} contact={this.state.resume.contact} />
           <div className='mainBlock'>
-            <LeftMain experienceItems={this.state.resume.experienceItems} educationItem={this.state.resume.educationItems} />
-            <RightMain educationItem={this.state.resume.educationItem} awardItems={this.state.resume.awardItems} skillItems={this.state.resume.skillItems} />
+            <div className="flex-colum leftBlock">
+                <Experiences experienceItems = {this.state.resume.experienceItems}/>
+            </div>
+            <div className="flex-colum rightBlock">
+                <Skills skillItems = {this.state.resume.skillItems}/>
+                <Awards awardItems = {this.state.resume.awardItems}/>
+                <Education educationItem={this.state.resume.educationItem}/>
+            </div>
           </div>
         </div>
       );
