@@ -2,6 +2,12 @@ body {
     background: rgb(116, 114, 114); 
 }
 
+@media screen and (max-device-width: 480px){
+    body{
+      -webkit-text-size-adjust: none;
+    }
+  }
+
 .paper {
     background: white;
     display: flex;
