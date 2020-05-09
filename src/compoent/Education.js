@@ -7,15 +7,15 @@ class Education extends React.Component {
         return (
             <div className="section">
                 <h2>EDUCATION</h2>
-                <p>{this.props.educationItem.degree} ({this.props.educationItem.classification})</p>
+                <p>{this.props.educationItem.degree} &emsp; ({this.props.educationItem.classification})</p>
                 <p>{this.props.educationItem.university} &emsp;&emsp; {this.props.educationItem.from} to {this.props.educationItem.to}</p>
                 {
                     this.props.educationItem.projects.map((project, index) => {
                         return (
-                            <Fragment key={index}>
+                            <div key={index}>
                                 <p>- {project.name}</p>
                                 <p>{project.techStacks}</p>
-                            </Fragment>
+                            </div>
                         )
                     })
                 }
