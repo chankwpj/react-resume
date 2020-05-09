@@ -26,23 +26,25 @@ class App extends Component {
 
   render() {
     if (Object.keys(this.state.resume).length === 0)
-      return <div></div>
-    else
+      return <div></div>  //TODO: add spinning loading
+    else {
+      const data = this.state.resume;
       return (
         <div className="paper rotate-in-ver">
-          <HeaderBlock personName={this.state.resume.name} contact={this.state.resume.contact} />
+          <HeaderBlock personName={data.name} contact={data.contact} />
           <div className='mainBlock'>
             <div className="flex-colum leftBlock">
-                <Experiences experienceItems = {this.state.resume.experienceItems}/>
+              <Experiences experienceItems={data.experienceItems} />
             </div>
             <div className="flex-colum rightBlock">
-                <Skills skillItems = {this.state.resume.skillItems}/>
-                <Awards awardItems = {this.state.resume.awardItems}/>
-                <Education educationItem={this.state.resume.educationItem}/>
+              <Skills skillItems={data.skillItems} />
+              <Awards awardItems={data.awardItems} />
+              <Education educationItem={data.educationItem} />
             </div>
           </div>
         </div>
       );
+    }
   }
 }
 
