@@ -16,7 +16,7 @@ class App extends Component {
       .then(res => res.json())
       .then((data) => {
         this.setState({ resume: data });
-        console.log(this.state.resume);
+        // console.log(this.state.resume);
       })
       .catch(console.log)
   }
