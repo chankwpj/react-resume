@@ -23,10 +23,10 @@ class App extends Component {
 
   render() {
     if (Object.keys(this.state.resume).length === 0)
-      return <div className="paper"></div>
+      return <div></div>
     else
       return (
-        <div className="paper">
+        <div className="paper rotate-in-ver">
           <HeaderBlock personName={this.state.resume.name} contact={this.state.resume.contact} />
           <div className='mainBlock'>
             <LeftMain experienceItems={this.state.resume.experienceItems} educationItem={this.state.resume.educationItems} />
