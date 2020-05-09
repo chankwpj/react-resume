@@ -39,15 +39,6 @@ body {
     flex-direction: column;
 }
 
-/* .name {
-    font-weight: bold;
-    font-size: 300%;
-} */
-
-/* .contact {
-    font-size: 94%;
-} */
-
 h1 {
     font-size: 300%;
     margin: 2%;
@@ -55,14 +46,15 @@ h1 {
 
 h2 {
     margin: 2%;
+    margin-left: 0%;
 }
 
 h4 {
     margin: 2%;
+    margin-left: 0%;
 }
 
 p {
-    font-size: 100%;
     margin: 0.99%
 }
 
