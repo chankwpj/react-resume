@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 class Education extends React.Component {
 
@@ -7,7 +7,7 @@ class Education extends React.Component {
         // console.log(data);
 
         const projects = [];
-        data.projects.map((project, index) => {
+        data.projects.forEach((project, index) => {
             projects.push(
                 <div key={index}>
                     <p>- {project.name}</p>

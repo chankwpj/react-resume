@@ -4,7 +4,7 @@ import '../Error.css';
 class ErrorPage extends Component {
 
     render() {
-        return <p className='errorPage'>Something wrong went please try again :(</p>;
+        return <p className='errorPage'>Something went wrong, please try again :(</p>;
     }
 
 }

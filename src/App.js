@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    if (Object.keys(this.state).length == 0) {
+    if (Object.keys(this.state).length === 0) {
       return <Loader />;
     }
 

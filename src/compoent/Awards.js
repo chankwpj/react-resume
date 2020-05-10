@@ -7,7 +7,7 @@ class Awards extends React.Component {
         // console.log(awardItems);
 
         const award = [];
-        awardItems.map((awardItem, index) => {
+        awardItems.forEach((awardItem, index) => {
             award.push(<Award key={index} awardItem={awardItem} />);
         });
 
