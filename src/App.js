@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import HeaderBlock from './compoent/Header'
-import Experiences from './compoent/Experiences'
-import Skills from './compoent/Skills';
-import Awards from './compoent/Awards';
-import Education from './compoent/Education';
+import Loading from './compoent/Loading';
+import ErrorPage from './compoent/ErrorPage';
+import Resume from './compoent/Resume';
 import './App.css';
 import './Print.css';
 
@@ -11,40 +9,33 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { resume: {} };
+    this.state = {};
   }
 
   componentDidMount() {
     fetch('https://kaichan-resume-api.azurewebsites.net/resume/release')
       .then(res => res.json())
+      .catch((err) => {
+        this.setState({ error: err });
+      })
       .then((data) => {
         this.setState({ resume: data });
-        // console.log(this.state.resume);
       })
-      .catch(console.log)
+      .catch((err) => {
+        this.setState({ error: err });
+      });
   }
 
   render() {
-    if (Object.keys(this.state.resume).length === 0)
-      return <div></div>  //TODO: add spinning loading
-    else {
-      const data = this.state.resume;
-      return (
-        <div className="paper rotate-in-ver">
-          <HeaderBlock personName={data.name} contact={data.contact} />
-          <div className='mainBlock'>
-            <div className="flex-colum leftBlock">
-              <Experiences experienceItems={data.experienceItems} />
-            </div>
-            <div className="flex-colum rightBlock">
-              <Skills skillItems={data.skillItems} />
-              <Awards awardItems={data.awardItems} />
-              <Education educationItem={data.educationItem} />
-            </div>
-          </div>
-        </div>
-      );
+    if (Object.keys(this.state).length == 0) {
+      return <Loading />;  //TODO: add spinning loading
     }
+
+    if (this.state.error !== undefined) {
+      return <ErrorPage />;
+    }
+
+    return <Resume resume={this.state.resume} />;
   }
 }
 
