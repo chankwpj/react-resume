@@ -5,14 +5,16 @@ class Awards extends React.Component {
     render() {
         const awardItems = this.props.awardItems;
         // console.log(awardItems);
+
+        const award = [];
+        awardItems.map((awardItem, index) => {
+            award.push(<Award key={index} awardItem={awardItem} />);
+        });
+
         return (
             <div className="section flex-colum">
                 <h2>AWARDS</h2>
-                {
-                    awardItems.map((awardItem, index) => {
-                        return <Award key={index} awardItem={awardItem} />
-                    })
-                }
+                {award}
             </div >
         )
     }
