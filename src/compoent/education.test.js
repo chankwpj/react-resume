@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import Education from './Education';
 
-it("renders name and description", () => {
+it("renders Education section", () => {
     const projects = [{ "name": "p1", "techStacks": "ts1" }, { "name": "p2", "techStacks": "ts2" }];
     const educationItem = {
         "degree": "degree",
