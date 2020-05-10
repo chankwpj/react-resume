@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../Error.css';
 
 class ErrorPage extends Component {
 
     render() {
-        return <p>Something Wrong</p>;
+        return <p className='errorPage'>Something wrong went please try again :(</p>;
     }
 
 }

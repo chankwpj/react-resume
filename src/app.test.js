@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import App from './App';
-import Loading from './compoent/Loading';
+import Loader from './compoent/Loader';
 import ErrorPage from './compoent/ErrorPage';
 import Resume from './compoent/Resume';
 
 it("render loading page given fetch is loading", () => {
     jest.spyOn(App.prototype, 'componentDidMount');
     const wrapper = shallow(<App />);
-    expect(wrapper.find(Loading)).to.have.lengthOf(1);
+    expect(wrapper.find(Loader)).to.have.lengthOf(1);
 });
 
 it("render error page given fetch returns error", (done) => {
