@@ -15,4 +15,9 @@
     height: 29.7cm;
   }
 
+  .shadow-drop-center {
+    -webkit-animation: none;
+            animation: none;
+  }
+
 }
