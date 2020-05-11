@@ -123,24 +123,24 @@ p {
  */
  @-webkit-keyframes color-change-3x {
     0% {
-      background: #fdfdfd;
+      background: #747474;
     }
     50% {
-      background: #a3a3a3;
+      background: #474747;
     }
     100% {
-      background: #424242;
+      background: #252525;
     }
   }
   @keyframes color-change-3x {
     0% {
-      background: #fdfdfd;
+      background: #747474;
     }
     50% {
-      background: #a3a3a3;
+      background: #474747;
     }
     100% {
-      background: #424242;
+      background: #252525;
     }
   }
 
@@ -168,8 +168,8 @@ p {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
   100% {
-    -webkit-box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 0 50px 0px rgba(255, 255, 255, 0.795);
+            box-shadow: 0 0 50px 0px rgba(255, 255, 255, 0.795);
   }
 }
 @keyframes shadow-drop-center {
@@ -178,7 +178,7 @@ p {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
   100% {
-    -webkit-box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 0 50px 0px rgba(255, 255, 255, 0.795);
+            box-shadow: 0 0 50px 0px rgba(255, 255, 255, 0.795);
   }
 }
