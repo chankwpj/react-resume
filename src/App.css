@@ -123,24 +123,24 @@ p {
  */
  @-webkit-keyframes color-change-3x {
     0% {
-      background: #747474;
+      background: #252525;
     }
     50% {
       background: #474747;
     }
     100% {
-      background: #252525;
+      background: #747474;
     }
   }
   @keyframes color-change-3x {
     0% {
-      background: #747474;
+      background: #252525;
     }
     50% {
       background: #474747;
     }
     100% {
-      background: #252525;
+      background: #747474;
     }
   }
 
