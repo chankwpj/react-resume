@@ -12,6 +12,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    container:
+      ports: 
+        - 8080
+
     steps:
     - uses: actions/checkout@master
 
