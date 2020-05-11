@@ -11,7 +11,7 @@ class Resume extends Component {
         const data = this.props.resume;
         return (
             //TODO: migrate this to ContextProvider
-            <div className="paper rotate-in-ver">
+            <div className="paper shadow-drop-center">
                 <HeaderBlock personName={data.name} contact={data.contact} />
                 <div className='mainBlock'>
                     <div className="flex-colum leftBlock">
