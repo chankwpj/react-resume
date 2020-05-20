@@ -1,6 +1,9 @@
 body {
     -webkit-animation: color-change-3x 8s linear infinite alternate both;
     animation: color-change-3x 8s linear infinite alternate both;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size-adjust: none;
 }
 
  @-webkit-keyframes bg-pan-left {
@@ -20,14 +23,6 @@ body {
     }
   }
   
-
-@media screen and (max-device-width: 480px){
-    body{
-      -webkit-text-size-adjust: none;
-      text-size-adjust: none;
-    }
-}
-
 .background {
     -webkit-animation: bg-pan-left 8s infinite both;
     animation: bg-pan-left 8s infinite both;
