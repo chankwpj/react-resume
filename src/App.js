@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-      fetch('https://kaichan-resume-api.azurewebsites.net/resume/release')
+      fetch('https://plain-resume-api.azurewebsites.net/resume/release')
         .then(res => res.json())
         .catch((err) => {
           this.setState({ error: err });
