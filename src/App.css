@@ -1,9 +1,8 @@
 body {
     -webkit-animation: color-change-3x 8s linear infinite alternate both;
     animation: color-change-3x 8s linear infinite alternate both;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    font-size-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
  @-webkit-keyframes bg-pan-left {
