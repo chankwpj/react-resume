@@ -21,7 +21,7 @@ it("render error page given fetch returns error", (done) => {
     const wrapper = shallow(<App />);
 
     expect(global.fetch.mock.calls.length).to.equals(1);
-    expect(global.fetch.mock.calls[0][0]).to.equals("https://kaichan-resume-api.azurewebsites.net/resume/release");
+    expect(global.fetch.mock.calls[0][0]).to.equals("https://plain-resume-api.azurewebsites.net/resume/release");
     global.fetch.mockClear();
     process.nextTick(() => {
         expect(wrapper.find(ErrorPage)).to.have.lengthOf(1);
@@ -40,7 +40,7 @@ it("render resume given fetch returns data", (done) => {
     const wrapper = shallow(<App />);
 
     expect(global.fetch.mock.calls.length).to.equals(1);
-    expect(global.fetch.mock.calls[0][0]).to.equals("https://kaichan-resume-api.azurewebsites.net/resume/release");
+    expect(global.fetch.mock.calls[0][0]).to.equals("https://plain-resume-api.azurewebsites.net/resume/release");
     global.fetch.mockClear();
     process.nextTick(() => {
         expect(wrapper.find(Resume)).to.have.lengthOf(1);

@@ -19,7 +19,6 @@ class Resume extends Component {
                     </div>
                     <div className="flex-colum rightBlock">
                         <Skills skillItems={data.skillItems} />
-                        <Awards awardItems={data.awardItems} />
                         <Education educationItem={data.educationItem} />
                     </div>
                 </div>

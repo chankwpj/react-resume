@@ -7,8 +7,15 @@ class Skills extends React.Component {
             <div className="section">
                 <h2>SKILLS</h2>
                 {
-                    skillItems.map((item, index) => {
-                        return <p key={index}>{item}</p>
+                    skillItems.map((skillItem, index) => {
+                        return (
+                            <div className="skillItem">
+                                <p key={index + "t"}>{skillItem.itemTitle}</p>
+                                {skillItem.items.map((item, idx) => { 
+                                    return <p key={index + idx + "d"}>{item}</p>
+                                })}
+                            </div>
+                        )
                     })
                 }
             </div>
